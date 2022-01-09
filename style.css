@@ -1,0 +1,567 @@
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url(fonts/Merriweather/Merriweather-Light.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather-Light";
+}
+
+/* welcome popup styling */
+
+h1.welcome-popup {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-first {
+  color: #ffffff;
+}
+
+.welcome-second, .welcome-third, .welcome-fourth {
+  color: #333333;
+}
+
+.welcome-fifth {
+  color: #009900;
+}
+
+.welcome-first, .welcome-second, .welcome-third, .welcome-fourth, .welcome-fifth {
+  display: none;
+}
+
+.visible-welcome {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  background-color: white;
+  left: 0px;
+  z-index: 2001;
+  width: 50px;
+  position: absolute;
+  width: 498px;
+  height: 648px;
+  left: 25%;
+  right: 25%;
+  top: 10%;
+  /* transition: left 0.7s ease; */
+}
+
+div.welcome-first {
+  background-color: #009900;
+  color: white;
+}
+
+div.welcome-content {
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+  height: 85%;
+}
+
+/* div.welcome-content {
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    height: 522px;
+} */
+
+.welcome-first-image {
+  width: 100%;
+  height: 310px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.welcome-image {
+  display: block;
+  margin-inline: auto;
+  margin-top: 48px;
+  width: 256px;
+}
+
+button.welcome-button {
+  display: block;
+  float: left;
+  height: 47px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 186px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.first-welcome-button {
+  display: block;
+  height: 47px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 186px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #adadad;
+  border-color: #adadad;
+  color: #ffffff;
+}
+
+.second-welcome-previous-button, .third-welcome-previous-button, .fourth-welcome-previous-button, .fifth-welcome-previous-button {
+  background-color: #adadad;
+  border-color: #adadad;
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+.second-welcome-next-button, .third-welcome-next-button, .fourth-welcome-next-button, .fifth-welcome-next-button {
+  color: #fff;
+  background-color: #009900;
+  border-color: #009900;
+}
+
+.button-start-welcome {
+  font: bold 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: #d85930;
+  color: #ffffff;
+  position: absolute;
+  top: 151px;
+  right: 7px;
+  z-index: 1;
+  border: none;
+  width: 80px;
+  margin-left: -100px;
+  display: block;
+  cursor: pointer;
+  padding: 9px 18px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-radius: 19px;
+}
+
+.button-start-welcome:hover {
+  background-color: #fff;
+  color: #d85930;
+  border: 1px solid var(--club-color);
+}
+
+/* end welcome popup styling */
+
+/* sidebar styling */
+
+.sidebar {
+  display: none;
+}
+
+.sidebar.visible {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  background-color: #333333;
+  left: 0px;
+  z-index: 2001;
+  width: 50px;
+  position: absolute;
+  width: 498px;
+  height: 558px;
+  left: 40px;
+  top: 40px;
+  /* transition: left 0.7s ease; */
+}
+
+span.close-button {
+  float: right;
+  right: 13px;
+  border-radius: 21px;
+  /* background-color: #cbbca3; */
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  /* color: #009900; */
+  cursor: pointer;
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 0;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+span.close-button:hover {
+  /* border-color: #009900; */
+  /* background-color: #009900; */
+  color: #ffffff;
+}
+
+span.item-close-button {
+  position: absolute;
+  z-index: 1000;
+  float: right;
+  right: 13px;
+  border-radius: 21px;
+  /* background-color: #cbbca3; */
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  /* color: #009900; */
+  cursor: pointer;
+  margin-top: -45%;
+  margin-right: 15px;
+  padding: 0;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+span.close-back-button {
+  display: block;
+  height: 31px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #009900;
+  border-color: #009900;
+  color: 4b4b4b;
+}
+
+div.sidebar-content {
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+  height: 522px;
+  color: #ffffff;
+}
+
+.sidebar-content-inner {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 3%;
+}
+
+.sidebar-content-inner h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 5px;
+}
+
+.sidebar-content-inner h2 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.sidebar-content-inner p {
+  text-align: center;
+}
+
+.narrator {
+  margin-top: 20px;
+  position: relative;
+}
+
+.narrator img {
+  border-radius: 9999px;
+  width: 64px;
+  height: 64px;
+  display: inline;
+  float: left;
+}
+
+.narrator-info {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+}
+
+.narrator-info h5 {
+  margin: 5px;
+  font-weight: 300;
+  font-size: 16px;
+  padding-top: 0;
+}
+
+.narrator-info h4 {
+  margin: 5px;
+  font-weight: 600;
+  color: #009900;
+  font-size: 18px;
+}
+
+.narrator-info p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+div.images-parent {
+  position: relative;
+}
+
+div img.overlay-image {
+  margin-top: 10px;
+}
+
+div img.under-image {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+}
+
+div.sidebar-content-inner h3 {
+  font-size: 16px;
+}
+
+div.sidebar-content-inner p.description {
+  font-size: 14px;
+}
+
+div.sidebar-video-player {
+  margin: 0;
+}
+
+/* end sidebar styling */
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.marker {
+  background-image: url("svg/garden.svg");
+  background-size: cover;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.marker-icon, .marker-text {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.marker-icon {
+  border-color: aquamarine;
+  border-width: 120px;
+  margin-top: 2px;
+}
+
+.marker-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+div.custom-popup {
+  display: none;
+  position: relative;
+  width: 360px;
+  height: 76px;
+  border-radius: 7px;
+  color: #009900;
+  padding: 0;
+  cursor: pointer;
+  z-index: 2000;
+  /* float: inline;  */
+}
+
+div.custom-popup.visible {
+  display: block;
+  position: relative;
+  width: 392px;
+  height: 76px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #dd4b64;
+  padding: 0;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+div.popup-image {
+  display: inline;
+  width: 70px;
+  float: left;
+}
+
+div.popup-image>img {
+  width: 76px;
+  min-height: 76px;
+  height: 100%;
+}
+
+div.popup-details {
+  display: inline;
+  float: left;
+  width: 67%;
+  margin-top: 15px;
+  z-index: 2000;
+}
+
+div.popup-details>h2 {
+  display: inline;
+  color: #dd4b64;
+  margin-left: 50px;
+  font-size: 1.2em;
+}
+
+div.popup-details>p {
+  display: inline;
+  margin-left: 50px;
+}
+
+div.arrow-link {
+  display: inline;
+  width: 30px;
+  height: 20px;
+  float: right;
+  background-image: url("svg/popup-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  padding-top: 56px;
+}
+
+
+
+/* responsiveness */
+
+@media (max-width: 600px) {
+  .visible-welcome {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 7px;
+    background-color: white;
+    left: 0px;
+    z-index: 2001;
+    left: 0;
+    top: 0;
+    /* transition: left 0.7s ease; */
+  }
+  .welcome-content {
+    height: 80%;
+  }
+  div.previous-next-button {
+    margin-left: 0;
+  }
+  div.previous-next-button {
+    margin-left: 20%;
+  }
+  button.welcome-button {
+    margin-left: 5%;
+    font-size: 0.8em;
+    width: 50%;
+  }
+  button.second-welcome-previous-button, button.third-welcome-previous-button, button.fourth-welcome-previous-button, button.fifth-welcome-previous-button {
+    font-size: 0.8em;
+    width: 25%;
+    left: 25%;
+  }
+  button.second-welcome-next-button, button.third-welcome-next-button, button.fourth-welcome-next-button, button.fifth-welcome-next-button {
+    font-size: 0.8em;
+    width: 25%;
+  }
+  div.custom-popup.visible {
+    display: block;
+    position: fixed;
+    width: 303px;
+    height: 76px;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #009900;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2000;
+    left: 20px;
+    right: 20px;
+    font-size: 0.8em;
+  }
+  div.popup-image {
+    display: inline;
+    width: 70px;
+    float: left;
+  }
+  div.popup-image>img {
+    width: 76px;
+    min-height: 76px;
+    height: 100%;
+  }
+  div.popup-details {
+    display: inline;
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+    padding: 0;
+    z-index: 2000;
+    margin-left: 10px;
+    text-align: left;
+  }
+  div.popup-details>h2 {
+    display: inline;
+    color: #009900;
+    margin-left: 10px;
+    font-size: 0.9em;
+    width: 100%;
+  }
+  div.popup-details>p {
+    display: inline;
+    margin-left: 10px;
+  }
+  div.arrow-link {
+    display: inline;
+    width: 30px;
+    height: 20px;
+    float: right;
+    background-image: url("svg/popup-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding-top: 56px;
+  }
+  .sidebar.visible {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* position: absolute; */
+    border-radius: 7px;
+    background-color: #333333;
+    z-index: 2001;
+    top: 0;
+    left: 0;
+  }
+  div.sidebar-content {
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    height: 92%;
+    width: 100%;
+    color: #ffffff;
+  }
+  .sidebar-audio-player {
+    position: fixed;
+    width: 100%;
+    /* bottom: 0; */
+  }
+}
